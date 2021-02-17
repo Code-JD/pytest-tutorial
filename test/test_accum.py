@@ -17,8 +17,7 @@ from stuff.accum import Accumulator
 
 @pytest.fixture
 def accum():
-	yield Accumulator()		# return/yield, yield turns it to a generator
-	print(" ~ Completed ~ ")
+	return Accumulator()		# return/yield, yield turns it to a generator
 
 
 # --------------------------------------------------------------------------------------
