@@ -24,23 +24,27 @@ def accum():
 # Test
 # --------------------------------------------------------------------------------------
 
+@pytest.mark.accumulator
 def test_accumulator_init(accum):
 	# accum = Accumulator()
 	assert accum.count == 0
 
 
+@pytest.mark.accumulator
 def test_accumulator_add_one(accum):
 	# accum = Accumulator()
 	accum.add()
 	assert accum.count == 1
 
 
+@pytest.mark.accumulator
 def test_accumulator_add_three(accum):
 	# accum = Accumulator()
 	accum.add(3)
 	assert accum.count == 3
 
 
+@pytest.mark.accumulator
 def test_accumulator_add_twice(accum):
 	# accum = Accumulator()
 	accum.add()

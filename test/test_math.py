@@ -9,7 +9,7 @@ Their pourpose is to show how to use the pytest framework by expample.
 # ----------------------------------------------------------------------------------------
 # A most basic test function
 # ----------------------------------------------------------------------------------------
-
+@pytest.mark.math
 def test_one_plus_one():
 	assert 1 + 1 == 2
 
@@ -18,6 +18,7 @@ def test_one_plus_one():
 # A test function to show assertion introspection
 # ----------------------------------------------------------------------------------------
 
+@pytest.mark.math
 def test_one_plus_two():
 	a = 1
 	b = 2
@@ -29,6 +30,7 @@ def test_one_plus_two():
 # A test function that verifies and exception
 # ----------------------------------------------------------------------------------------
 
+@pytest.mark.math
 def test_divide_by_zero():
 	with pytest.raises(ZeroDivisionError) as e:
 		num = 1 / 0
@@ -46,12 +48,15 @@ def test_divide_by_zero():
 # negative by a negative
 # multiply floats
 
+@pytest.mark.math
 def test_multiply_two_positive_ints():
 	assert 2 * 3 == 6
 
+@pytest.mark.math
 def test_multiply_identity():
 	assert 1 * 99 == 99
 
+@pytest.mark.math
 def test_multiply_zero():
 	assert 0 * 100 == 0
 
@@ -63,6 +68,7 @@ def test_multiply_zero():
 # ----------------------------------------------------------------------------------------
 # A parametrized test function
 # ----------------------------------------------------------------------------------------
+
 
 products = [
 	(2, 3, 6),			# positive integers
